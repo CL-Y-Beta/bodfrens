@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_02_113802) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_17_134352) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -88,6 +88,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_02_113802) do
     t.boolean "bonus", default: false
     t.integer "user_count", default: 0
     t.integer "bonus_count_multiplayer", default: 0
+    t.boolean "circuit"
   end
 
   create_table "user_game_data", force: :cascade do |t|
@@ -95,7 +96,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_02_113802) do
     t.integer "time_taken"
     t.boolean "finish"
     t.boolean "bonus_finish"
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
     t.integer "game_xp"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -112,6 +113,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_02_113802) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username"
+    t.string "uid"
+    t.string "avatar_url"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
