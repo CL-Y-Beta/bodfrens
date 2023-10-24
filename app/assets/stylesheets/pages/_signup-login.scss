@@ -1,5 +1,5 @@
 .signup-container {
-  display: flex;
+  // display: flex;
   max-width: 100%;
   height: 100vh;
   overflow-x: hidden;
@@ -131,7 +131,6 @@
 
 .main-orange-btn.signup-button {
   width: 90px;
-  height: 30px;
   padding: 7px 13px;
   font-family: Montserrat;
   font-size: 16px;
@@ -156,6 +155,14 @@
  }
 
  .user_password {
+  width: 100%;
+ }
+
+ .user_username {
+  width: 100%;
+ }
+
+ .user_password_confirmation {
   width: 100%;
  }
 
